@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action will be used after the user confirms that they would like to schedule an appointment and the details for the appointment are collected by the AI chatbot. The details for the appointment will include the appointment date and time, patient&apos;s registration number and the appointment type i.e. in-person or doorstep</description>
+    <invocationTarget>Create_Medical_Event_Record</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create Medical Event Record</masterLabel>
+    <progressIndicatorMessage>Hang tight, scheduling an appointment for you!</progressIndicatorMessage>
+</GenAiFunction>

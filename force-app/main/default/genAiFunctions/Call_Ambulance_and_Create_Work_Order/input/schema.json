@@ -1,0 +1,21 @@
+{
+  "required" : [ "registrationNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "registrationNumber" : {
+      "title" : "registrationNumber",
+      "description" : "This is the registration number of the patient",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "request" : {
+      "title" : "request",
+      "description" : "This is the request from the user asking for an ambulance",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

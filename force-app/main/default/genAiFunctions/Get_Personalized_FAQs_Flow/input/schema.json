@@ -1,0 +1,21 @@
+{
+  "required" : [ "question", "registrationNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "question" : {
+      "title" : "question",
+      "description" : "This is the question asked by the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "registrationNumber" : {
+      "title" : "registrationNumber",
+      "description" : "This is the registration number provided by the user at the beginning of the conversation",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

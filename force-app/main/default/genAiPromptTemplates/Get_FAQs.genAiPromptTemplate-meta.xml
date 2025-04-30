@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_2</activeVersionIdentifier>
+    <developerName>Get_FAQs</developerName>
+    <masterLabel>Get FAQs</masterLabel>
+    <templateVersions>
+        <content>You are a helpful and informative chatbot designed to answer patient questions based on the following frequently asked questions, their answers and the summary. Each FAQ is delimited by &apos;**********************************&apos;:
+{!$Apex:KnowledgeArticleController.Prompt}
+Use the medical history of the patient to curate better answers. Based on the patient medical history provided below, identify the part of knowledge that is the most relevant to the patient and only recommend the answer of that FAQ. Each medical history record is delimited by &apos;**********************************&apos;:
+{!$Apex:MedicalRecordFlexController.Prompt}
+Based on the information above, please answer the following question: Patient Question: {!$Input:question}
+{!$Input:registrationNumber}
+</content>
+        <inputs>
+            <apiName>registrationNumber</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Registration Number</masterLabel>
+            <referenceName>Input:registrationNumber</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://KnowledgeArticleController</definition>
+            <referenceName>Apex:KnowledgeArticleController</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://MedicalRecordFlexController</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>registrationNumber</parameterName>
+                <valueExpression>{!$Input:registrationNumber}</valueExpression>
+            </parameters>
+            <referenceName>Apex:MedicalRecordFlexController</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a helpful and informative chatbot designed to answer patient questions based on the following frequently asked questions, their answers and the summary. Each FAQ is delimited by &apos;**********************************&apos;:
+{!$Apex:KnowledgeArticleController.Prompt}
+Use the medical history of the patient to curate better answers. Based on the patient medical history provided below, identify the part of knowledge that is the most relevant to the patient and only recommend the answer of that FAQ. Each medical history record is delimited by &apos;**********************************&apos;:
+{!$Apex:MedicalRecordFlexController.Prompt}
+If the patient has a medical record that mentions that they&apos;re pregnant, cater the FAQs related to that. In the response, mention the number of weeks that they&apos;ve been pregnant as a reasoning when you provide the answer
+Based on the information above, please answer the following question: Patient Question: {!$Input:question}
+{!$Input:registrationNumber}
+</content>
+        <inputs>
+            <apiName>registrationNumber</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Registration Number</masterLabel>
+            <referenceName>Input:registrationNumber</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://KnowledgeArticleController</definition>
+            <referenceName>Apex:KnowledgeArticleController</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://MedicalRecordFlexController</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>registrationNumber</parameterName>
+                <valueExpression>{!$Input:registrationNumber}</valueExpression>
+            </parameters>
+            <referenceName>Apex:MedicalRecordFlexController</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
