@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_3</activeVersionIdentifier>
+    <description>This Template will be used to generate a list of medical events and procedures that should be carried out for a medical milestone in a subject</description>
+    <developerName>Generate_Medical_Event</developerName>
+    <masterLabel>Generate Medical Event</masterLabel>
+    <templateVersions>
+        <content>You are a personal Advisor on Medical Processes to be followed for a Patient. The are of expertise for you is maternity and child care.
+Based on the Milestone Details below:
+{!$Input:Milestone_Detail}
+
+And for the following Patient:
+{!$Input:Patient_Detail}
+
+Generate a list of medical tests and procedure schedules for the next {!$Input:Milestone_Period} 
+based on the Milestone Date provided above and the Patient Records. Provide the results in a JSON format. 
+The keys should be Procedure_Name__c, Detailed_Description__c, Procedure_Category__c, Procedure_Type__c, Purpose__c, Recommended_Start_Date__c, Notes__c, Procedure_Location__c. Output Must be JSON only and must not contain any other text and stick to these keys.
+
+</content>
+        <inputs>
+            <apiName>Patient_Detail</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Patient Detail</masterLabel>
+            <referenceName>Input:Patient_Detail</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Milestone_Detail</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Milestone Detail</masterLabel>
+            <referenceName>Input:Milestone_Detail</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Milestone_Period</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Milestone Period</masterLabel>
+            <referenceName>Input:Milestone_Period</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a personal Advisor on Medical Processes to be followed for a Patient. The are of expertise for you is maternity and child care.
+Based on the Milestone Details below:
+{!$Input:Milestone_Detail}
+
+And for the following Patient:
+{!$Input:Patient_Detail}
+
+Generate a list of medical tests and procedure schedules for the next {!$Input:Milestone_Period} 
+based on the Milestone Date provided above and the Patient Records. Provide the results in a JSON format. 
+The keys should be Patient__c which is the same string id provided in patient detail above, Procedure_Name__c, Detailed_Description__c, Procedure_Category__c, Procedure_Type__c, Purpose__c, Recommended_Start_Date__c, Notes__c, Procedure_Location__c. Output Must be parseable JSON format only and must not contain any other text and stick to these keys.
+
+</content>
+        <inputs>
+            <apiName>Patient_Detail</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Patient Detail</masterLabel>
+            <referenceName>Input:Patient_Detail</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Milestone_Detail</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Milestone Detail</masterLabel>
+            <referenceName>Input:Milestone_Detail</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Milestone_Period</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Milestone Period</masterLabel>
+            <referenceName>Input:Milestone_Period</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a personal Advisor on Medical Processes to be followed for a Patient. The are of expertise for you is maternity and child care.
+Based on the Milestone Details below:
+{!$Input:Milestone_Detail}
+
+And for the following Patient:
+{!$Input:Patient_Detail}
+
+Generate a list of medical tests, vaccination and procedure schedules for the next {!$Input:Milestone_Period} 
+based on the Milestone Date provided above and the Patient Records. Provide the results in a JSON format. 
+The keys should be Patient__c which is the same string id provided in patient detail above, Procedure_Name__c, Detailed_Description__c, Procedure_Category__c, Procedure_Type__c, Purpose__c, Recommended_Start_Date__c, Notes__c, Procedure_Location__c. Output Must be parseable JSON format only and must not contain any other text and stick to these keys.
+
+</content>
+        <inputs>
+            <apiName>Milestone_Period</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Milestone Period</masterLabel>
+            <referenceName>Input:Milestone_Period</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Milestone_Detail</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Milestone Detail</masterLabel>
+            <referenceName>Input:Milestone_Detail</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Patient_Detail</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Patient Detail</masterLabel>
+            <referenceName>Input:Patient_Detail</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>la9lnC4htrSED3IVuIfrzrlx7Rp0/L14vEZNsbDI80g=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

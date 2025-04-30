@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is for helping answer patient&apos;s questions by searching through the knowledge articles and providing information from those articles. The questions can be about pre, ante and post natal care by new and expecting mothers</description>
+    <developerName>Personalized_FAQs</developerName>
+    <genAiFunctions>
+        <functionName>Get_Personalized_FAQs_Flow</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Ask the user for their registration number before answering any of their questions</description>
+        <developerName>instruction_asktheuser0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_asktheuser0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure that responses are accurate and relevant to the user&apos;s context and previous interactions.</description>
+        <developerName>instruction_ensurethat1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ensurethat1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the question asked by the patient involves any issues happening with them, ask if they&apos;d like to book an appointment</description>
+        <developerName>instruction_ifthequest2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthequest2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide personalized responses based on the user&apos;s specific inquiry.</description>
+        <developerName>instruction_provideper3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_provideper3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the registration number was previously provided, use the same value for the entirety of the conversation</description>
+        <developerName>instruction_iftheregis4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_iftheregis4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Personalized FAQs</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is solely to help with issues and answer questions about pre, ante and post natal care by new and expecting mothers by searching knowledge articles.</scope>
+</GenAiPlugin>
